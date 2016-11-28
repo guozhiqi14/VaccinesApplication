@@ -14,6 +14,7 @@ data=sum_week_data.group_NYout
 pd.set_option('display.max_columns',None)# when checking in ipnb
 
 def heatmap_disease_matrix(disease):
+    disease = disease.upper()
     if ' ' in disease:#contain space, change it into +
         disease=disease.replace(" ", "+")
     df_new=data[data['disease']==disease]
